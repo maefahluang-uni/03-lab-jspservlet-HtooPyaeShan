@@ -29,11 +29,11 @@ public class BMICalculatorServlet extends HttpServlet{
         String builtType;
         if (bmi < 18.5) {
             builtType = "underweight";
-        } else if (bmi>=18.5 && bmi<=25) {
+        } else if (bmi<25) {
             builtType = "normal";
-        } else if (bmi>=25 && bmi<=30) {
+        } else if (bmi<30) {
             builtType = "overweight";
-        } else if (bmi>=30 && bmi<=35) {
+        } else if (bmi<35) {
             builtType = "obese";
         } else {
             builtType = "extremely obese";
@@ -44,7 +44,7 @@ public class BMICalculatorServlet extends HttpServlet{
         request.setAttribute("builtType", builtType);
 
         //TODO: forward to jsp
-        request.getRequestDispatcher("/bmi_result.jsp").forward(request, response);
+        request.getRequestDispatcher("bmi_result.jsp").forward(request, response);
     }
     
 }
