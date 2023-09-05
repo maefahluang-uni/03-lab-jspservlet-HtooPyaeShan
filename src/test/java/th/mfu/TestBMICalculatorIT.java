@@ -68,5 +68,6 @@ public class TestBMICalculatorIT {
             _logger.info("IT1 test passed");
         }
     }
+    
 
 }
